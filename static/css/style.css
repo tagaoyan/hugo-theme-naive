@@ -150,6 +150,22 @@ code, pre, samp, kbd {
     font-style: italic;
 }
 
+.entry-content table {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    border-collapse: collapse;
+}
+.entry-content thead {
+    border-bottom: 1px solid #000;
+}
+.entry-content td {
+    padding: 0.5ex;
+}
+
+.entry-content tr:nth-child(even) {
+    background: #d3d7cf;
+}
+
 /*
  * Table of Contents
  */
