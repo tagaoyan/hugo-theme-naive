@@ -1,0 +1,11 @@
+{{ partial "header.html" . }}
+
+<h1>{{ .Title }}</h1>
+<ul class="{{ .Data.Plural }}">
+    {{ $data := .Data }}
+    {{ range $key, $value := .Data.Terms }}
+    <li><a href="{{ $.Site.BaseURL }}{{ $data.Plural }}/{{ $key | urlize }}">{{ replace ($key | title) "-" " " }}</a> <span class="count">({{ len $value }})</span></li>
+    {{ end }}
+</ul>
+
+{{ partial "footer.html" . }}

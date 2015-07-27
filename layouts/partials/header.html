@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }}</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+    {{ if .RSSlink }}
+    <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="site-title"><a id="site-home-link" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+        {{ with .Site.Params.Slogan }}
+        <small class="site-slogan">
+            {{ . }}
+        </small>
+        {{ end }}
+        </h1>
+        <nav class="site-nav">
+            <ul>
+                {{ range .Site.Menus.main }}
+                <li><a href="{{ $.Site.BaseURL }}{{.URL}}"> {{ .Name }} </a></li>
+                {{end}}
+            </ul>
+        </nav>
+    </header>
+    <main class="site-content">

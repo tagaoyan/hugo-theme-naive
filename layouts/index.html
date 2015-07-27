@@ -1,0 +1,8 @@
+{{ partial "header.html" . }}
+<div class="posts">
+    {{ range first 5 (where .Data.Pages "Section" "post") }}
+    {{ .Render "summary" }}
+    {{ end }}
+</div>
+<a id="all-posts-link" href="{{ .Site.BaseURL }}post/">All Posts &raquo;</a>
+{{ partial "footer.html" . }}

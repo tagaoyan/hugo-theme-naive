@@ -1,0 +1,12 @@
+<article class="hentry">
+    <header>
+        <h1 class="entry-title">
+            {{ .Title }}
+        </h1>
+        {{ .Render "metadata" }}
+    </header>
+    {{ .TableOfContents }}
+    <main class="entry-content">
+    {{ .Content }}
+    </main>
+</article>

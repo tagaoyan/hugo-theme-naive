@@ -1,0 +1,13 @@
+        </main>
+        <footer class="site-footer">
+            <p class="copyright">
+            <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> &copy;
+            {{ if eq .Site.Params.StartYear .Now.Year }}
+            2015
+            {{ else }}
+            {{ .Site.Params.StartYear }}&ndash;{{ .Now.Year }}
+            {{ end }}
+            </p>
+        </footer>
+    </body>
+</html>
