@@ -3,7 +3,7 @@
  */
 
 body {
-    font-family: "Open Sans", Tahoma, sans-serif;
+    font-family: Roboto, "Avenir Next", "DejaVu Sans", Tahoma, sans-serif;
     font-size: 18px;
     max-width: 768px;
     width: 95%;
@@ -31,7 +31,8 @@ a:visited {
 }
 
 code, pre, samp, kbd {
-    font-family: "DejaVu Sans Mono", Consolas, monospace;
+    font-family: "DejaVu Sans Mono", Menlo, Consolas, monospace;
+    font-size: 90%;
 }
 
 hr {
@@ -53,7 +54,10 @@ hr {
 }
 
 .site-title {
+    /*
     font-family: "Libre Baskerville", serif;
+    */
+    font-family: "Roboto Condensed", "DejaVu Sans Condensed", "Avenir Next Condensed", "Arial Narrow", sans-serif;
     font-size: 2.6rem;
     margin-bottom: 0;
 }
@@ -61,6 +65,9 @@ hr {
 #site-home-link {
     text-decoration: none;
     color: #000;
+}
+#site-home-link:hover {
+    background: #729fcf;
 }
 
 .site-slogan {
@@ -106,11 +113,19 @@ hr {
 .entry-title {
     font-size: 2rem;
 }
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+    font-weight: normal;
+}
 .entry-content h2 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
 }
 .entry-content h3 {
     font-size: 1.5rem;
+    font-weight: bold;
 }
 .entry-content h4 {
     font-size: 1.3rem;
@@ -156,6 +171,13 @@ hr {
     font-style: italic;
 }
 
+@media (max-width: 30rem) {
+    .entry-content blockquote {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
 .entry-content table {
     border-top: 2px solid #000;
     border-bottom: 2px solid #000;
@@ -194,3 +216,21 @@ hr {
     }
 }
 
+.entry-authors,
+.entry-categories,
+.entry-tags {
+    display: inline-block;
+}
+
+.entry-authors:hover,
+.entry-categories:hover,
+.entry-tags:hover {
+    background: #d3d7cf;
+}
+
+.entry-authors a,
+.entry-categories a,
+.entry-tags a {
+    margin-left: 0.5ex;
+    margin-right: 0.5ex;
+}
