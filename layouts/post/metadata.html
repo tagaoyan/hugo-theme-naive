@@ -4,7 +4,7 @@
     &middot;
     <span class="entry-authors byline">
     {{ range . }}
-    <a href="{{ $.Site.BaseURL }}/authors/{{ . | urlize | lower}}" class="author">{{ . }}</a>
+    <a href="{{ $.Site.BaseURL }}authors/{{ . | urlize | lower}}" class="author">{{ . }}</a>
     {{ end }}
     {{ end }}
     </span>
@@ -12,7 +12,7 @@
     &middot;
     <span class="entry-categories">
     {{ range . }}
-    <a href="{{ $.Site.BaseURL }}/categories/{{ . | urlize | lower}}" class="category">{{ . }}</a>
+    <a href="{{ $.Site.BaseURL }}categories/{{ . | urlize | lower}}" class="category">{{ . }}</a>
     {{ end }}
     </span>
     {{ end }}
@@ -20,7 +20,7 @@
     &middot;
     <span class="entry-tags">
     {{ range . }}
-    <a href="{{ $.Site.BaseURL }}/tags/{{ . | urlize | lower}}" class="tag">{{ . }}</a>
+    <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize | lower}}" class="tag">{{ . }}</a>
     {{ end }}
     </span>
     {{ end }}
