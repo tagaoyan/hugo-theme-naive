@@ -1,0 +1,4 @@
+<figure>
+<img src="{{ .Page.Site.BaseURL }}asset/{{ .Get "file" }}"{{ with .Get "title" }} title="{{ . }}"{{ end }}{{ with .Get "alt" }} alt="{{ . }}"{{ end }}>
+{{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
