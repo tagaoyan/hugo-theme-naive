@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-<h1 class="page-title">Posts</h1>
+<h1 class="page-title">{{ .Title }}</h1>
 {{ range .Data.Pages.GroupByDate "Jan, 2006" }}
 <h2>{{ .Key }}</h2>
 <ul class="posts">
