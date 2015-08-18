@@ -6,6 +6,10 @@
     {{ .Render "metadata" }}
     </header>
     <main class="entry-summary">
-    {{ .Summary }}
+        {{ if .Truncated }}
+        {{ .Summary }}
+        {{ else }}
+        {{ .Content }}
+        {{ end }}
     </main>
 </article>
