@@ -234,3 +234,11 @@ hr {
     margin-left: 0.5ex;
     margin-right: 0.5ex;
 }
+
+.prev-label,
+.next-label {
+    display: block;
+    color: #8f5902;
+    font-variant: small-caps;
+}
+

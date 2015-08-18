@@ -1,3 +1,15 @@
 {{ partial "header.html" . }}
 {{ .Render "content" }}
+<section class="adj-entries">
+{{ with .PrevInSection }}
+<div class="prev-entry">
+    <span class="prev-label">previous</span><a href="{{ .Permalink }}">{{ .Title }}</a>
+</div>
+{{ end }}
+{{ with .NextInSection }}
+<div class="next-entry">
+    <span class="next-label">next</span><a href="{{ .Permalink }}">{{ .Title }}</a>
+</div>
+{{ end }}
+</section>
 {{ partial "footer.html" . }}
