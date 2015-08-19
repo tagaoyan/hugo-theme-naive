@@ -1,8 +1,29 @@
 {{ partial "header.html" . }}
 <div class="posts">
-    {{ range first 5 (where .Data.Pages "Section" "post") }}
-    {{ .Render "summary" }}
+{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+{{ range $paginator.Pages }}
+{{ .Render "summary" }}
+{{ end }}
+</div>
+{{ if gt $paginator.TotalPages 1 }}
+<div class="paginator">
+    {{ with $paginator.First }}
+    <a class="first-page" href="{{ .URL }}">&laquo;</a>
+    {{ end }}
+    {{ with $paginator.Prev }}
+    <a class="prev-page" href="{{ .URL }}">&lt;</a>
+    {{ else }}
+    <span class="prev-page disabled" href="{{ .URL }}">&lt;</span>
+    {{ end }}
+    <span class="current-page">{{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}</span>
+    {{ with $paginator.Next }}
+    <a class="next-page" href="{{ .URL }}">&gt;</a>
+    {{ else }}
+    <span class="next-page disabled">&gt;</span>
+    {{ end }}
+    {{ with $paginator.Last }}
+    <a class="last-page" href="{{ .URL }}">&raquo;</a>
     {{ end }}
 </div>
-<a id="all-posts-link" href="{{ .Site.BaseURL }}post/">All Posts &raquo;</a>
+{{ end }}
 {{ partial "footer.html" . }}
