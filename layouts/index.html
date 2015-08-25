@@ -13,7 +13,7 @@
     {{ with $paginator.Prev }}
     <a class="prev-page" href="{{ .URL }}">&lt;</a>
     {{ else }}
-    <span class="prev-page disabled" href="{{ .URL }}">&lt;</span>
+    <span class="prev-page disabled">&lt;</span>
     {{ end }}
     <span class="current-page">{{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}</span>
     {{ with $paginator.Next }}

@@ -1,15 +1,15 @@
 <article class="hentry">
     <header>
-        <h1 class="entry-title">
+        <h1 class="entry-title-link">
             <a href="{{ .Permalink }}">{{ .Title }}</a>
         </h1>
     {{ .Render "metadata" }}
     </header>
-    <main class="entry-summary entry-content">
+    <div class="entry-summary entry-content">
         {{ if .Truncated }}
         {{ .Summary }}
         {{ else }}
         {{ .Content }}
         {{ end }}
-    </main>
+    </div>
 </article>
