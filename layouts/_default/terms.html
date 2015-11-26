@@ -4,7 +4,7 @@
 <ul class="{{ .Title }}">
     {{ $data := .Data }}
     {{ range $key, $value := .Data.Terms }}
-    <li><a href="{{ $.Site.BaseURL }}{{ $data.Plural }}/{{ $key | urlize }}">{{ or (index $.Site.Data.Terms (replace $key "-" " " | title)) (replace $key "-" " " | title ) }}</a> <span class="count">({{ len $value }})</span></li>
+    <li><a href="{{ $.Site.BaseURL }}{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}</a> <span class="count">({{ len $value }})</span></li>
     {{ end }}
 </ul>
 

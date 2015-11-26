@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-<h1>{{ title .Data.Singular }}: {{ or (index .Site.Data.Terms .Title) .Title}}</h1>
+<h1>{{ title .Data.Singular }}: {{ .Title }}</h1>
 <ul>
 {{ range .Data.Pages }}
 {{ .Render "li" }}
