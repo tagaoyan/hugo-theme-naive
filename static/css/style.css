@@ -153,6 +153,17 @@ hr {
     margin-bottom: 1rem;
 }
 
+.entry-metadata {
+    display: flex;
+    align-items: baseline;
+}
+
+.entry-metadata a,
+.entry-metadata time {
+    display: inline-block;
+    white-space: nowrap;
+}
+
 .entry-content p {
     line-height: 1.5;
 }

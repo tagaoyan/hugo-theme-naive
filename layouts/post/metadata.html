@@ -1,26 +1,23 @@
 <aside class="entry-metadata">
-    <time class="entry-date published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+    <time class="entry-date published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" title="Publish Date">{{ .Date.Format "Jan 2, 2006" }}</time>
     {{ with .Params.authors }}
-    &middot;
     <span class="entry-authors byline" title="Authors">
     {{ range . }}
-    <a href="{{ $.Site.BaseURL }}authors/{{ . | urlize | lower}}" class="author">{{ . }}</a>
+    <a href="{{ $.Site.BaseURL }}authors/{{ . | urlize }}" class="author">{{ . }}</a>
     {{ end }}
     {{ end }}
     </span>
     {{ with .Params.categories }}
-    &middot;
-    <span class="entry-categories" title="Tags">
+    <span class="entry-categories" title="Categories">
     {{ range . }}
-    <a href="{{ $.Site.BaseURL }}categories/{{ . | urlize | lower}}" class="category">{{ . }}</a>
+    <a href="{{ $.Site.BaseURL }}categories/{{ . | urlize }}" class="category">{{ . }}</a>
     {{ end }}
     </span>
     {{ end }}
     {{ with .Params.tags }}
-    &middot;
-    <span class="entry-tags" title="Categories">
+    <span class="entry-tags" title="Tags">
     {{ range . }}
-    <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize | lower}}" class="tag">{{ . }}</a>
+    <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="tag">{{ . }}</a>
     {{ end }}
     </span>
     {{ end }}
