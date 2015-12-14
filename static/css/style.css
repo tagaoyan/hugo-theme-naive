@@ -153,10 +153,6 @@ hr {
     margin-bottom: 1rem;
 }
 
-.entry-metadata {
-    display: flex;
-    align-items: baseline;
-}
 
 .entry-metadata a,
 .entry-metadata time {
@@ -165,7 +161,7 @@ hr {
 }
 
 .entry-content p {
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .entry-content h2,
@@ -289,6 +285,13 @@ hr {
     }
 }
 
+.entry-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+}
+
 .entry-date,
 .entry-authors,
 .entry-categories,
@@ -296,6 +299,7 @@ hr {
     display: inline-block;
     padding: 0.125rem;
     border-radius: 0.25rem;
+    text-align: center;
 }
 
 .entry-date:hover,
