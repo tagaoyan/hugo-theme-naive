@@ -302,6 +302,7 @@ ul.terms{
     padding: 0.125rem;
     border-radius: 0.25rem;
     text-align: center;
+    color: #555753;
 }
 
 .entry-date:hover,
@@ -321,7 +322,7 @@ ul.terms{
 .prev-label,
 .next-label {
     display: block;
-    color: #8f5902;
+    color: #555753;
     font-variant: small-caps;
 }
 
