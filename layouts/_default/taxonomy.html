@@ -1,4 +1,6 @@
+{{ partial "head.html" . }}
 {{ partial "header.html" . }}
+<main class="site-content">
 
 <h1>{{ title .Data.Singular }}: {{ .Title }}</h1>
 <ul class="posts">
@@ -7,4 +9,5 @@
 {{ end }}
 </ul>
 
+</main>
 {{ partial "footer.html" . }}

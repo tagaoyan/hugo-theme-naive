@@ -1,4 +1,6 @@
+{{ partial "head.html" . }}
 {{ partial "header.html" . }}
+<main class="site-content">
 {{ .Render "content" }}
 <section class="adj-entries">
 {{ with .NextInSection }}
@@ -12,4 +14,5 @@
 </div>
 {{ end }}
 </section>
+</main>
 {{ partial "footer.html" . }}

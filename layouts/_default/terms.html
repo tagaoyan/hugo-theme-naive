@@ -1,4 +1,6 @@
+{{ partial "head.html" . }}
 {{ partial "header.html" . }}
+<main class="site-content">
 
 <h1>{{ .Title }}</h1>
 <ul class="{{ .Title | urlize }} terms">
@@ -8,4 +10,5 @@
     {{ end }}
 </ul>
 
+</main>
 {{ partial "footer.html" . }}

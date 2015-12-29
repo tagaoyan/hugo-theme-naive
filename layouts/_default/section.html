@@ -1,4 +1,6 @@
+{{ partial "head.html" . }}
 {{ partial "header.html" . }}
+<main class="site-content">
 
 <h1 class="page-title">{{ .Title }}</h1>
 {{ range .Data.Pages.GroupByDate "Jan, 2006" }}
@@ -10,4 +12,5 @@
 </ul>
 {{ end }}
 
+</main>
 {{ partial "footer.html" . }}
