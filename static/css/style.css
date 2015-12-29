@@ -160,8 +160,10 @@ hr {
     white-space: nowrap;
 }
 
-.entry-content p {
-    line-height: 1.6;
+.entry-content,
+ul.posts,
+ul.terms{
+    line-height: 1.5;
 }
 
 .entry-content h2,
