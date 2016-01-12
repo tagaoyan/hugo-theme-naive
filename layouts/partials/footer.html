@@ -9,5 +9,9 @@
             <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
             </p>
         </footer>
+        {{ if eq .Site.Params.UseMath true }}
+        <script src="{{ $.Site.BaseURL }}js/mimetex.js"></script>
+        {{ end }}
+        {{ .Site.Params }}
     </body>
 </html>
