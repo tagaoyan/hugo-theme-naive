@@ -326,3 +326,7 @@ ul.terms{
     font-variant: small-caps;
 }
 
+.terms {
+    column-width: 10em;
+    -moz-column-width: 10em;
+}
