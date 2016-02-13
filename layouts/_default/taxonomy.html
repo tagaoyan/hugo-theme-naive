@@ -3,11 +3,21 @@
 <main class="site-content">
 
 <h1>{{ title .Data.Singular }}: {{ .Title }}</h1>
+
+{{ with index $.Site.Data "TermDescription" }}
+{{ with index . $.Data.Plural }}
+{{ with index . $.Title }}
+<section class="term-description entry-content">{{ markdownify . }}</section>
+{{ end }}
+{{ end }}
+{{ end }}
+
 <ul class="posts">
 {{ range .Data.Pages }}
 {{ .Render "li" }}
 {{ end }}
 </ul>
+
 
 </main>
 {{ partial "footer.html" . }}
