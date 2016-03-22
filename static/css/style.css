@@ -330,3 +330,13 @@ ul.terms{
     column-width: 10em;
     -moz-column-width: 10em;
 }
+
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    box-shadow: inherit;
+    padding-left: 0;
+    padding-right: 0;
+}

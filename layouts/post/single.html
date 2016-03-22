@@ -2,6 +2,7 @@
 {{ partial "header.html" . }}
 <main class="site-content">
 {{ .Render "content" }}
+{{ template "_internal/disqus.html" . }}
 <section class="adj-entries">
 {{ with .NextInSection }}
 <div class="next-entry">
