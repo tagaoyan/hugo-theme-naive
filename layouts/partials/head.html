@@ -9,9 +9,6 @@
     {{ if .Site.Params.CustomCSS }}
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/custom.css">
     {{ end }}
-    {{ if .Site.Params.UseMath }}
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/mimetex.css">
-    {{ end }}
     {{ if .RSSlink }}
     <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{ end }}

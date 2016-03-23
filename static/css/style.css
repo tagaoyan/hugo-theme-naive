@@ -3,7 +3,7 @@
  */
 
 html {
-    font-family: Roboto, "Avenir Next", "DejaVu Sans", Tahoma, sans-serif;
+    font-family: "Noto Sans", "Avenir Next", "DejaVu Sans", Tahoma, sans-serif;
     font-size: 18px;
 }
 
@@ -94,6 +94,10 @@ hr {
 }
 
 .site-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
     padding: 0;
 }
 
@@ -101,17 +105,18 @@ hr {
     display: inline-block;
     margin: 0 1rem;
     padding: 0.125rem;
-    border-radius: 0.25rem;
 }
 .site-nav li a {
     color: #555753;
 }
 .site-nav li:hover {
-    text-decoration: none;
-    box-shadow: 0 0 0.25rem #888a85 inset;
+    background: rgba(186,189,182,0.5);
 }
 
 @media (max-width: 30rem) {
+    .site-nav ul {
+        display: block;
+    }
     .site-nav li {
         display: block;
     }
@@ -192,22 +197,17 @@ ul.terms{
 
 
 .entry-content pre {
-    background: #babdb6;
+    background: rgba(186,189,182,0.5);
     overflow: auto;
     padding: 0.5rem;
-    box-shadow: 0 0 0.25rem #888a85 inset; 
 }
 .entry-content pre > code {
-    border-radius: none;
-    border: none;
-    box-shadow: none;
     padding-left: 0;
     padding-right: 0;
+    background: transparent;
 }
 .entry-content code {
-    background: #babdb6;
-    border-radius: 4px;
-    box-shadow: 0 0 0.25rem #888a85 inset;
+    background: rgba(186,189,182,0.5);
     padding-left: 0.125rem;
     padding-right: 0.125rem;
 }
@@ -253,6 +253,8 @@ ul.terms{
     border-top: 2px solid #888a85;
     border-bottom: 2px solid #888a85;
     border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
 }
 .entry-content thead {
     border-bottom: 1px solid #888a85;
@@ -300,7 +302,6 @@ ul.terms{
 .entry-tags {
     display: inline-block;
     padding: 0.125rem;
-    border-radius: 0.25rem;
     text-align: center;
     color: #555753;
 }
@@ -309,7 +310,7 @@ ul.terms{
 .entry-authors:hover,
 .entry-categories:hover,
 .entry-tags:hover {
-    box-shadow: 0 0 0.25rem #888a85 inset;
+    background: rgba(186,189,182,0.5);
 }
 
 .entry-authors a,
