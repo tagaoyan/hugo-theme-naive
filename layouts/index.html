@@ -1,32 +1,48 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 <main class="site-content">
+{{ if .Site.Params.PaginateHome }}
 <div class="posts">
-{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
-{{ range $paginator.Pages }}
-{{ .Render "summary" }}
-{{ end }}
+    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+    {{ range $paginator.Pages }}
+    {{ .Render "summary" }}
+    {{ end }}
 </div>
 {{ if gt $paginator.TotalPages 1 }}
 <div class="paginator">
     {{ with $paginator.First }}
-    <a class="first-page" href="{{ .URL }}">&laquo;</a>
+    <a class="first-page" href="{{ .URL }}">&laquo;&laquo;</a>
     {{ end }}
     {{ with $paginator.Prev }}
-    <a class="prev-page" href="{{ .URL }}">&lt;</a>
+    <a class="prev-page" href="{{ .URL }}">&laquo;</a>
     {{ else }}
-    <span class="prev-page disabled">&lt;</span>
+    <span class="prev-page disabled">&laquo;</span>
     {{ end }}
     <span class="current-page">{{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}</span>
     {{ with $paginator.Next }}
-    <a class="next-page" href="{{ .URL }}">&gt;</a>
+    <a class="next-page" href="{{ .URL }}">&raquo;</a>
     {{ else }}
-    <span class="next-page disabled">&gt;</span>
+    <span class="next-page disabled">&raquo;</span>
     {{ end }}
     {{ with $paginator.Last }}
-    <a class="last-page" href="{{ .URL }}">&raquo;</a>
+    <a class="last-page" href="{{ .URL }}">&raquo;&raquo;</a>
     {{ end }}
 </div>
+{{ end }}
+{{ else }}
+
+<div class="posts">
+    {{ $posts := (where .Data.Pages "Type" "post") }}
+    {{ range first .Site.Params.HomeLimit $posts }}
+    {{ .Render "summary" }}
+    {{ end }}
+</div>
+{{ if ge (len $posts) .Site.Params.HomeLimit }}
+<div class="more-posts">
+    <a class="more-posts-link" href="{{.Site.BaseURL}}post/">More Posts</a>
+</div>
+{{ end }}
+
 {{ end }}
 </main>
 {{ partial "footer.html" . }}

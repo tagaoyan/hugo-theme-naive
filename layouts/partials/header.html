@@ -1,11 +1,20 @@
 <header class="site-header">
-    <h1 class="site-title"><a id="site-home-link" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-    {{ with .Site.Params.Slogan }}
-    <small class="site-slogan">
-        {{ . }}
-    </small>
+    {{ if .IsHome }}
+    <h1 class="site-title">
+    {{ else }}
+    <section class="site-title">
     {{ end }}
+        <a id="site-home-link" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+        {{ with .Site.Params.Slogan }}
+        <small class="site-slogan">
+            {{ . }}
+        </small>
+        {{ end }}
+    {{ if (not .IsHome) }}
+    </section>
+    {{ else }}
     </h1>
+    {{ end }}
     <nav class="site-nav">
         <ul>
             {{ range .Site.Menus.main }}

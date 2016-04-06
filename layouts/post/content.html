@@ -5,7 +5,9 @@
         </h1>
         {{ .Render "metadata" }}
     </header>
+    {{ if .Params.usetoc }}
     {{ .TableOfContents }}
+    {{ end }}
     <div class="entry-content">
     {{ .Content }}
     </div>
