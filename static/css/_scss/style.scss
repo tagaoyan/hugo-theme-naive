@@ -32,10 +32,11 @@ body {
 
 a:link {
     text-decoration: none;
+    border-bottom: 1px solid transparent;
     color: $accentColor;
 }
 a:hover {
-    text-decoration: underline;
+    border-bottom: 1px solid $accentColor;
 }
 a:visited {
     color: $accentColor;
@@ -88,6 +89,7 @@ hr {
         color: $accentColor;
         text-decoration: none;
         background: $liteColor;
+        border-bottom-color: transparent;
     }
 }
 
@@ -135,6 +137,7 @@ hr {
     a:hover {
         text-decoration: none;
         color: $accentColor;
+        border-bottom-color: transparent;
     }
     .disabled {
         opacity: 0.4;
@@ -152,6 +155,7 @@ hr {
     a:hover {
         text-decoration: none;
         color: $accentColor;
+        border-bottom-color: transparent;
     }
 }
 
@@ -186,7 +190,7 @@ hr {
 .entry-content,
 ul.posts,
 ul.terms{
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .entry-content h2,
@@ -254,7 +258,7 @@ ul.terms{
 .entry-content blockquote {
     border-left: 0.4rem solid $accentColor;
     background: mix($accentColor, $liteColor, 20%);
-    padding-left: 0.6rem;
+    padding: 1rem;
     font-style: italic;
 }
 

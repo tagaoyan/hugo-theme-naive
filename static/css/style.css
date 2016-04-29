@@ -15,10 +15,11 @@ body {
     font-size: 16px; } }
 a:link {
   text-decoration: none;
+  border-bottom: 1px solid transparent;
   color: #b58900; }
 
 a:hover {
-  text-decoration: underline; }
+  border-bottom: 1px solid #b58900; }
 
 a:visited {
   color: #b58900; }
@@ -62,7 +63,8 @@ hr {
   .site-footer a:hover {
     color: #b58900;
     text-decoration: none;
-    background: #eee8d5; }
+    background: #eee8d5;
+    border-bottom-color: transparent; }
 
 .site-slogan {
   font-weight: normal;
@@ -94,7 +96,8 @@ hr {
     color: #93a1a1; }
   .paginator a:hover {
     text-decoration: none;
-    color: #b58900; }
+    color: #b58900;
+    border-bottom-color: transparent; }
   .paginator .disabled {
     opacity: 0.4; }
 
@@ -106,7 +109,8 @@ hr {
   color: #93a1a1; }
 .more-posts a:hover {
   text-decoration: none;
-  color: #b58900; }
+  color: #b58900;
+  border-bottom-color: transparent; }
 
 /*
  * content
@@ -134,7 +138,7 @@ hr {
 .entry-content,
 ul.posts,
 ul.terms {
-  line-height: 1.5; }
+  line-height: 1.6; }
 
 .entry-content h2,
 .entry-content h3,
@@ -197,7 +201,7 @@ ul.terms {
 .entry-content blockquote {
   border-left: 0.4rem solid #b58900;
   background: #e3d5aa;
-  padding-left: 0.6rem;
+  padding: 1rem;
   font-style: italic; }
 
 [lang^='zh'] blockquote {
