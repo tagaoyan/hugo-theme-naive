@@ -4,12 +4,24 @@
 	<header>
 		<h1 class="entry-title">404 Page not found</h1>
 	</header>
-	
 	<div class="entry-content">
         <h2>What happened?</h2>
-		<p>From <a href="https://tools.ietf.org/html/rfc2616#section-10.4.5">RFC 2616 Hypertext Transfer Protocol – HTTP/1.1</a>:</p>
-		
-        <p>The server has not found anything matching the Request-URI. No indication is given of whether the condition is temporary or permanent. The 410 (Gone) status code SHOULD be used if the server knows, through some internally configurable mechanism, that an old resource is permanently unavailable and has no forwarding address. This status code is commonly used when the server does not wish to reveal exactly why the request has been refused, or when no other response is applicable.</p>
+		<p>From <a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Section 6.5.4 of [RFC7231]</a>:</p>
+
+<p>
+The 404 (Not Found) status code indicates that the origin server did
+not find a current representation for the target resource or is not
+willing to disclose that one exists.  A 404 status code does not
+indicate whether this lack of representation is temporary or
+permanent; the 410 (Gone) status code is preferred over 404 if the
+origin server knows, presumably through some configurable means, that
+the condition is likely to be permanent.
+</p>
+<p>
+A 404 response is cacheable by default; i.e., unless otherwise
+indicated by the method definition or explicit cache controls (see
+<a href="https://tools.ietf.org/html/rfc7234#section-4.2.2">Section 4.2.2 of [RFC7234]</a>).
+</p>
 	</div>
 </article>
 </main>
