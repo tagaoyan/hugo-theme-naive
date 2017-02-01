@@ -1,6 +1,6 @@
-{{ partial "head.html" . }}
-{{ partial "header.html" . }}
+{{ define "title" }}{{.Title}} | {{.Site.Title}}{{ end }}
+{{ define "main" }}
 <main class="site-content">
 {{ .Render "content" }}
 </main>
-{{ partial "footer.html" . }}
+{{ end }}

@@ -1,7 +1,6 @@
-{{ partial "head.html" . }}
-{{ partial "header.html" . }}
+{{ define "main" }}
 <main class="site-content">
-{{ if .Site.Params.PaginateHome }}
+{{ if .Site.Params.paginatehome }}
 <div class="posts">
     {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
     {{ range $paginator.Pages }}
@@ -33,11 +32,11 @@
 
 <div class="posts">
     {{ $posts := (where .Data.Pages "Type" "post") }}
-    {{ range first .Site.Params.HomeLimit $posts }}
+    {{ range first .Site.Params.homelimit $posts }}
     {{ .Render "summary" }}
     {{ end }}
 </div>
-{{ if ge (len $posts) .Site.Params.HomeLimit }}
+{{ if ge (len $posts) .Site.Params.homelimit }}
 <div class="more-posts">
     <a class="more-posts-link" href="{{.Site.BaseURL}}post/">More Posts</a>
 </div>
@@ -45,4 +44,4 @@
 
 {{ end }}
 </main>
-{{ partial "footer.html" . }}
+{{ end }}

@@ -1,14 +1,12 @@
-{{ partial "head.html" . }}
-{{ partial "header.html" . }}
+{{ define "main" }}
 <main class="site-content">
 
 <h1>{{ .Title }}</h1>
-<ul class="{{ .Title | urlize }} terms">
-    {{ $data := .Data }}
-    {{ range $key, $value := .Data.Terms }}
-    <li><a href="{{ $.Site.BaseURL }}{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}</a> <span class="count">({{ len $value }})</span></li>
-    {{ end }}
+<ul class="posts">
+{{ range .Data.Pages }}
+{{ .Render "li" }}
+{{ end }}
 </ul>
 
 </main>
-{{ partial "footer.html" . }}
+{{ end }}

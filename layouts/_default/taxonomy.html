@@ -1,8 +1,8 @@
-{{ partial "head.html" . }}
-{{ partial "header.html" . }}
+{{ define "title" }}{{ i18n .Data.Singular }}: {{.Title}} | {{ .Site.Title }}{{ end }}
+{{ define "main" }}
 <main class="site-content">
 
-<h1>{{ title .Data.Singular }}: {{ .Title }}</h1>
+<h1><a href="{{ .Data.Plural | absLangURL }}">{{ i18n .Data.Singular }}</a>: {{ .Title }}</h1>
 
 {{ with index $.Site.Data "TermDescription" }}
 {{ with index . $.Data.Plural }}
@@ -20,4 +20,4 @@
 
 
 </main>
-{{ partial "footer.html" . }}
+{{ end }}

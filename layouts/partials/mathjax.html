@@ -1,0 +1,27 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX","output/SVG", "output/PreviewHTML"],
+  extensions: ["tex2jax.js"],
+  showMathMenu: false,
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+  },
+  TeX: {
+    extensions: ["autoload-all.js"],
+  },
+  SVG: {
+    font: "STIX-Web",
+  },
+});
+MathJax.Hub.Queue(function() {
+    // Fix <code> tags after MathJax finishes running. This is a
+    // hack to overcome a shortcoming of Markdown. Discussion at
+    // https://github.com/mojombo/jekyll/issues/199
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script>
+

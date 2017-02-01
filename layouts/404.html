@@ -1,28 +1,36 @@
-{{ partial "head.html" . }}
-<main class="site-content">
-<article class="hentry">
-	<header>
-		<h1 class="entry-title">404 Page not found</h1>
-	</header>
-	<div class="entry-content">
-        <h2>What happened?</h2>
-		<p>From <a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Section 6.5.4 of [RFC7231]</a>:</p>
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    <head>
+        <title>404 Not Found | {{.Site.Title}}</title>
+        {{ partial "head.html" . }}
+    </head>
+    <body>
+        <main class="site-content" lang="en">
+        <article class="hentry">
+            <header>
+                <h1 class="entry-title">404 Not Found</h1>
+            </header>
+            <div class="entry-content">
+                <h2>What happened?</h2>
+                <p>From <a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Section 6.5.4 of [RFC7231]</a>:</p>
 
-<p>
-The 404 (Not Found) status code indicates that the origin server did
-not find a current representation for the target resource or is not
-willing to disclose that one exists.  A 404 status code does not
-indicate whether this lack of representation is temporary or
-permanent; the 410 (Gone) status code is preferred over 404 if the
-origin server knows, presumably through some configurable means, that
-the condition is likely to be permanent.
-</p>
-<p>
-A 404 response is cacheable by default; i.e., unless otherwise
-indicated by the method definition or explicit cache controls (see
-<a href="https://tools.ietf.org/html/rfc7234#section-4.2.2">Section 4.2.2 of [RFC7234]</a>).
-</p>
-	</div>
-</article>
-</main>
-{{ partial "footer.html" . }}
+        <p>
+        The 404 (Not Found) status code indicates that the origin server did
+        not find a current representation for the target resource or is not
+        willing to disclose that one exists.  A 404 status code does not
+        indicate whether this lack of representation is temporary or
+        permanent; the 410 (Gone) status code is preferred over 404 if the
+        origin server knows, presumably through some configurable means, that
+        the condition is likely to be permanent.
+        </p>
+        <p>
+        A 404 response is cacheable by default; i.e., unless otherwise
+        indicated by the method definition or explicit cache controls (see
+        <a href="https://tools.ietf.org/html/rfc7234#section-4.2.2">Section 4.2.2 of [RFC7234]</a>).
+        </p>
+            </div>
+        </article>
+        </main>
+        {{ partial "footer.html" . }}
+    </body>
+</html>

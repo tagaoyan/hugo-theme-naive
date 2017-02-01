@@ -1,5 +1,5 @@
 html {
-  font-family: "Noto Sans", "Avenir Next", "DejaVu Sans", Tahoma, "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  font-family: "Avenir Next", "DejaVu Sans", Tahoma, "Source Han Sans SC", "Microsoft YaHei", sans-serif;
   font-size: 18px; }
 
 body {
@@ -16,16 +16,16 @@ body {
 a:link {
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  color: #b58900; }
+  color: #cb4b16; }
 
 a:hover {
-  border-bottom: 1px solid #b58900; }
+  border-bottom: 1px solid #cb4b16; }
 
 a:visited {
-  color: #b58900; }
+  color: #cb4b16; }
 
 code, pre, samp, kbd {
-  font-family: "DejaVu Sans Mono", Menlo, Consolas, courier, monospace;
+  font-family: Menlo, "DejaVu Sans Mono", Consolas, courier, monospace;
   font-size: 90%; }
 
 hr {
@@ -61,7 +61,7 @@ hr {
   color: #93a1a1; }
   .site-header a:hover,
   .site-footer a:hover {
-    color: #b58900;
+    color: #cb4b16;
     text-decoration: none;
     background: #eee8d5;
     border-bottom-color: transparent; }
@@ -96,7 +96,7 @@ hr {
     color: #93a1a1; }
   .paginator a:hover {
     text-decoration: none;
-    color: #b58900;
+    color: #cb4b16;
     border-bottom-color: transparent; }
   .paginator .disabled {
     opacity: 0.4; }
@@ -109,7 +109,7 @@ hr {
   color: #93a1a1; }
 .more-posts a:hover {
   text-decoration: none;
-  color: #b58900;
+  color: #cb4b16;
   border-bottom-color: transparent; }
 
 /*
@@ -199,8 +199,8 @@ ul.terms {
   margin-bottom: 0; }
 
 .entry-content blockquote {
-  border-left: 0.4rem solid #b58900;
-  background: #e3d5aa;
+  border-left: 0.4rem solid #cb4b16;
+  background: #e7c9af;
   padding: 1rem;
   font-style: italic; }
 

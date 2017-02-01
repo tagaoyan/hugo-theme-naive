@@ -1,0 +1,14 @@
+- id: tag
+  translation: 标签
+- id: tags
+  translation: 标签
+- id: category
+  translation: 分类
+- id: categories
+  translation: 分类
+- id: author
+  translation: 作者
+- id: authors
+  translation: 作者
+- id: Posts
+  translation: 文章

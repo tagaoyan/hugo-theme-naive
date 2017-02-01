@@ -1,8 +1,8 @@
-{{ partial "head.html" . }}
-{{ partial "header.html" . }}
+{{ define "title" }}{{ i18n .Data.Plural }} | {{ .Site.Title }}{{ end }}
+{{ define "main" }}
 <main class="site-content">
 
-<h1>{{ .Title }}</h1>
+<h1>{{ i18n .Data.Plural }}</h1>
 <ul class="{{ .Title | urlize }} terms">
     {{ $data := .Data }}
     {{ range $key, $value := .Data.Terms }}
@@ -11,4 +11,4 @@
 </ul>
 
 </main>
-{{ partial "footer.html" . }}
+{{ end }}

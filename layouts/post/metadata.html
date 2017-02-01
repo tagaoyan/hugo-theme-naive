@@ -1,5 +1,5 @@
 <aside class="entry-metadata">
-    <time class="entry-date published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" title="Publish Date"><i class="fa fa-calendar"></i> {{ .Date.Format (or $.Site.Params.DateFormat "Jan 2, 2006") }}</time>
+    <time class="entry-date published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" title="Publish Date"><i class="fa fa-calendar"></i> {{ .Date.Format (or $.Site.Params.dateformat "Jan 2, 2006") }}</time>
     {{ with .Params.authors }}
     <span class="entry-authors byline" title="Authors">
         <i class="fa fa-user"></i>
