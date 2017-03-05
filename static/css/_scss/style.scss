@@ -103,9 +103,6 @@ hr {
 
 .site-nav {
     ul {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;
         padding: 0;
     }
     li {
@@ -144,7 +141,7 @@ hr {
     }
 }
 
-.more-posts {
+.more-entries {
     a {
         background: $liteColor;
         display: inline-block;
@@ -180,15 +177,14 @@ hr {
     margin-bottom: 1rem;
 }
 
-
-.entry-metadata a,
-.entry-metadata time {
-    display: inline-block;
-    white-space: nowrap;
+.entry footer ul.entry-metadata {
+    list-style: none;
+    padding-left: 0;
 }
 
+
 .entry-content,
-ul.posts,
+ul.entries,
 ul.terms{
     line-height: 1.6;
 }
@@ -315,14 +311,11 @@ ul.terms{
 }
 
 .entry-metadata {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    //justify-content: space-around;
     font-size: 0.8rem;
 }
 
 .entry-date,
+.entry-reading-time,
 .entry-authors,
 .entry-categories,
 .entry-tags {
@@ -332,6 +325,7 @@ ul.terms{
 }
 
 .entry-date:hover,
+.entry-reading-time:hover,
 .entry-authors:hover,
 .entry-categories:hover,
 .entry-tags:hover {
@@ -366,4 +360,22 @@ code.has-jax {
     box-shadow: inherit;
     padding-left: 0;
     padding-right: 0;
+}
+
+ul.entries {
+    padding-left: 0;
+    display: table;
+    width: 100%;
+    > li {
+        display: table-row;
+        > span {
+            display: table-cell;
+        }
+    }
+}
+
+.entry-item-metadata {
+    text-align: right;
+    white-space: nowrap;
+    vertical-align: middle;
 }

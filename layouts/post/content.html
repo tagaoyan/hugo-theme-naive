@@ -1,9 +1,9 @@
-<article class="hentry">
+<article class="hentry entry">
     <header>
         <h1 class="entry-title">
             {{ .Title }}
         </h1>
-        {{ .Render "metadata" }}
+        {{ .Render "metadata_header" }}
     </header>
     {{ if .Site.Params.usetoc }}
     {{ .TableOfContents }}
@@ -11,4 +11,7 @@
     <div class="entry-content">
     {{ .Content }}
     </div>
+    <footer>
+        {{ .Render "metadata_footer" }}
+    </footer>
 </article>

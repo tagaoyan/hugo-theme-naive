@@ -1,0 +1,32 @@
+<aside class="entry-metadata">
+    <time class="entry-date published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" title="Publish Date"><i class="fa fa-calendar"></i> {{ .Date.Format (or $.Site.Params.dateformat "Jan 2, 2006") }}</time>
+    <span class="entry-reading-time">
+        {{ .ReadingTime }} min
+    </span>
+    <!--
+    {{ with .Params.authors }}
+    <span class="entry-authors byline" title="Authors">
+        <i class="fa fa-user"></i>
+    {{ range . }}
+    <a href="{{ $.Site.BaseURL }}authors/{{ . | urlize }}" class="author">{{ . }}</a>
+    {{ end }}
+    {{ end }}
+    </span>
+    {{ with .Params.categories }}
+    <span class="entry-categories" title="Categories">
+        <i class="fa fa-folder"></i>
+    {{ range . }}
+    <a href="{{ $.Site.BaseURL }}categories/{{ . | urlize }}" class="category">{{ . }}</a>
+    {{ end }}
+    </span>
+    {{ end }}
+    {{ with .Params.tags }}
+    <span class="entry-tags" title="Tags">
+        <i class="fa fa-tags"></i>
+    {{ range . }}
+    <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="tag">{{ . }}</a>
+    {{ end }}
+    </span>
+    {{ end }}
+    -->
+</aside>

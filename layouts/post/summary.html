@@ -3,7 +3,7 @@
         <h2 class="entry-title-link">
             <a href="{{ .Permalink }}">{{ .Title }}</a>
         </h2>
-    {{ .Render "metadata" }}
+    {{ .Render "metadata_header" }}
     </header>
     <div class="entry-summary entry-content">
         {{ if .Truncated }}

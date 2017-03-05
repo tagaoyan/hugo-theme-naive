@@ -1,0 +1,22 @@
+{{ if gt .TotalPages 1 }}
+<div class="paginator">
+    {{ with .First }}
+    <a class="first-page" href="{{ .URL }}">&laquo;&laquo;</a>
+    {{ end }}
+    {{ with .Prev }}
+    <a class="prev-page" href="{{ .URL }}">&laquo;</a>
+    {{ else }}
+    <span class="prev-page disabled">&laquo;</span>
+    {{ end }}
+    <span class="current-page">{{ .PageNumber }} of {{ .TotalPages }}</span>
+    {{ with .Next }}
+    <a class="next-page" href="{{ .URL }}">&raquo;</a>
+    {{ else }}
+    <span class="next-page disabled">&raquo;</span>
+    {{ end }}
+    {{ with .Last }}
+    <a class="last-page" href="{{ .URL }}">&raquo;&raquo;</a>
+    {{ end }}
+</div>
+{{ end }}
+

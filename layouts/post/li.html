@@ -1,4 +1,8 @@
-<li>
-    <a href="{{ .Permalink }}">{{ .Title }}</a> ·
-    <time class="entry-date published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"><i class="fa fa-calendar"></i> {{ .Date.Format (or $.Site.Params.shortdateformat (or $.Site.Params.dateformat "Jan 2, 2006")) }}</time>
+<li class="entry-item">
+    <span class="entry-item-title">
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </span>
+    <span class="entry-item-metadata">
+    <time class="entry-date published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"><i class="fa fa-calendar"></i>&nbsp;{{ .Date.Format (or $.Site.Params.shortdateformat (or $.Site.Params.dateformat "Jan 2, 2006")) }}</time>
+    </span>
 </li>

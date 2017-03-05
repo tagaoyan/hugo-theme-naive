@@ -1,23 +1,14 @@
-{{ define "title" }}{{ i18n .Data.Singular }}: {{.Title}} | {{ .Site.Title }}{{ end }}
+{{ define "title" }}{{ with .Site.GetPage "taxonomyTerm" .Data.Plural }}{{ .Title }}{{ end }} / {{.Title}} | {{ .Site.Title }}{{ end }}
 {{ define "main" }}
 <main class="site-content">
 
-<h1><a href="{{ .Data.Plural | absLangURL }}">{{ i18n .Data.Singular }}</a>: {{ .Title }}</h1>
+<h1><a href="{{ .Data.Plural | absLangURL }}">{{ with .Site.GetPage "taxonomyTerm" .Data.Plural }}{{ .Title }}{{ end }}</a> / {{ .Title }}</h1>
 
-{{ with index $.Site.Data "TermDescription" }}
-{{ with index . $.Data.Plural }}
-{{ with index . $.Title }}
-<section class="term-description entry-content">{{ markdownify . }}</section>
-{{ end }}
-{{ end }}
-{{ end }}
+<div class="entry-content">
+    {{ .Content }}
+</div>
 
-<ul class="posts">
-{{ range .Data.Pages }}
-{{ .Render "li" }}
-{{ end }}
-</ul>
-
+{{ partial "list-plain.html" .Data.Pages }}
 
 </main>
 {{ end }}

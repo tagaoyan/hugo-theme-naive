@@ -1,0 +1,9 @@
+{{ range . }}
+<h2>{{ .Key }}</h2>
+<ul class="entries">
+{{ range .Pages }}
+{{ .Render "li" }}
+{{ end }}
+</ul>
+{{ end }}
+

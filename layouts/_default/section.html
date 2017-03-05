@@ -1,16 +1,10 @@
-{{ define "title" }}{{ i18n .Title }} | {{ .Site.Title }}{{ end }}
+{{ define "title" }}{{ .Title }} | {{ .Site.Title }}{{ end }}
 {{ define "main" }}
 <main class="site-content">
 
-<h1 class="page-title">{{ i18n .Title }}</h1>
-{{ range .Data.Pages.GroupByDate (or $.Site.Params.monthformat "Jan, 2006") }}
-<h2>{{ .Key }}</h2>
-<ul class="posts">
-{{ range .Pages }}
-{{ .Render "li" }}
-{{ end }}
-</ul>
-{{ end }}
+<h1 class="page-title">{{ .Title }}</h1>
+
+{{ partial "list-group.html" (.Data.Pages.GroupByDate (or $.Site.Params.monthformat "Jan, 2006")) }}
 
 </main>
 {{ end }}

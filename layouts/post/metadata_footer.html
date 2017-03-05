@@ -1,0 +1,19 @@
+<ul class="entry-metadata">
+{{ range .Site.Menus.meta }}
+{{ $taxonomy := .Name }}
+<li class="entry-{{$taxonomy}}">
+{{ with $.Site.GetPage "taxonomyTerm" $taxonomy }}
+{{ with .Params.icon }}
+<i class="fa fa-{{ . }}"></i>
+{{ else }}
+<i class="fa fa-link"></i>
+{{ end }}
+{{ .Title }}
+{{ end }}
+{{ range  $.Param .Name }}
+<a class="{{ singularize $taxonomy }}" href="{{ absLangURL (printf "%s/%s/" $taxonomy (urlize .)) }}">{{ . }}</a>
+{{ end }}
+</li>
+{{ end }}
+</ul>
+

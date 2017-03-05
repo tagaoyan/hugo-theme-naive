@@ -1,12 +1,15 @@
-{{ define "title" }}{{ i18n .Data.Plural }} | {{ .Site.Title }}{{ end }}
+{{ define "title" }}{{ .Title }} | {{ .Site.Title }}{{ end }}
 {{ define "main" }}
 <main class="site-content">
 
-<h1>{{ i18n .Data.Plural }}</h1>
+<h1>{{ .Title }}</h1>
 <ul class="{{ .Title | urlize }} terms">
-    {{ $data := .Data }}
-    {{ range $key, $value := .Data.Terms }}
-    <li><a href="{{ $.Site.BaseURL }}{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}</a> <span class="count">({{ len $value }})</span></li>
+    {{ $taxonomy := .Data.Plural }}
+    {{ range $key, $value := .Data.Terms.ByCount }}
+    {{ $url := (absLangURL (printf "%s/%s" $taxonomy $value.Term)) }}
+    <li><a href="{{ $url }}">{{ with  $.Site.GetPage "taxonomy" $taxonomy $value.Term }}{{ .Title }}{{ end }}</a> <span class="count">({{ $value.Count }})</span>
+    
+    </li>
     {{ end }}
 </ul>
 
