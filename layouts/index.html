@@ -1,3 +1,4 @@
+{{ define "title" }}{{ .Title }} | {{ .Site.Title }}{{ end }}
 {{ define "main" }}
 <main class="site-content">
 
@@ -5,11 +6,13 @@
 
 {{ if eq $paginator.PageNumber 1 }}
 {{ with .Content }}
-{{ $.Render "plain" }}
+<div class="entry-content">
+    {{ . }}
+</div>
 {{ end }}
 {{ end }}
 
-{{ partial "list-plain.html" $paginator.Pages }}
+{{ partial "list-summary.html" $paginator.Pages }}
 {{ partial "paginator.html" $paginator }}
 
 </main>

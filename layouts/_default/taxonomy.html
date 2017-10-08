@@ -4,9 +4,11 @@
 
 <h1><a href="{{ .Data.Plural | absLangURL }}">{{ with .Site.GetPage "taxonomyTerm" .Data.Plural }}{{ .Title }}{{ end }}</a> / {{ .Title }}</h1>
 
+{{ with .Content }}
 <div class="entry-content">
-    {{ .Content }}
+    {{ . }}
 </div>
+{{ end }}
 
 {{ partial "list-plain.html" .Data.Pages }}
 

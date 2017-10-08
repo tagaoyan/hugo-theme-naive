@@ -1,11 +1,11 @@
 <footer class="site-footer">
     <p class="copyright">
     ©
-    {{ if eq .Site.Params.startyear .Now.Year }}
-    {{ .Now.Year }}
-    {{ else }}
-    {{ .Site.Params.startyear }}–{{ .Now.Year }}
-    {{ end }}
+    {{- if eq .Site.Params.startyear (now).Year -}}
+    {{- .Now.Year -}}
+    {{- else -}}
+    {{- .Site.Params.startyear }}–{{ (now).Year -}}
+    {{- end }}
     <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
     </p>
 </footer>

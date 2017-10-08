@@ -3,7 +3,7 @@
 <main class="site-content">
 
 <h1>{{ .Title }}</h1>
-<ul class="{{ .Title | urlize }} terms">
+<ul class="{{ .Data.Plural }} terms">
     {{ $taxonomy := .Data.Plural }}
     {{ range $key, $value := .Data.Terms.ByCount }}
     {{ $url := (absLangURL (printf "%s/%s" $taxonomy $value.Term)) }}
